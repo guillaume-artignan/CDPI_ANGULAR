@@ -1,0 +1,42 @@
+.Article {
+    border : 1px solid gray;
+    border-radius: 10px;
+    margin-top : 5px;
+    margin-bottom : 5px;
+
+}
+
+.Article > .score {
+    background-color: lightgray;
+    border-radius: 10px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 15px;
+    color : gray;
+}
+
+.pour {
+    color : lightseagreen;
+}
+
+.pour:hover, .contre:hover{
+    font-weight: bold;
+}
+
+.contre {
+    color : lightseagreen
+}
+
+
+

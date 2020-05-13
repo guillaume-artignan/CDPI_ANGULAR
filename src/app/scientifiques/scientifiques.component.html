@@ -1,0 +1,12 @@
+<div>
+    <h1>{{title}} {{personne.prenom}} {{personne.nom}}</h1>
+
+    <h2 (click)="toto($event,'YO')" >Element</h2>
+    <h2>Détail</h2>
+    <ul>
+        <li>Nom : {{personne.nom}}</li>
+        <li>Prénom : {{personne.prenom}}</li>
+        <li>Découverte : {{personne.decouverte}}</li>
+        <li>Description : {{personne.description}}</li>
+    </ul>
+</div>

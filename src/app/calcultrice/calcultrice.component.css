@@ -1,0 +1,13 @@
+button {
+    width : 100%;
+}
+
+.col-3{
+    padding : 5px;
+}
+
+.resultat{
+    font-size: 30px;
+    font-family: "Consolas", "Arial";
+    text-align: right;
+}

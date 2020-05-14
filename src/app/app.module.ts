@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ScientifiquesComponent } from './scientifiques/scientifiques.component';
 import { CalcultriceComponent } from './calcultrice/calcultrice.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,9 @@ import { CalcultriceComponent } from './calcultrice/calcultrice.component';
     CalcultriceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [CalcultriceComponent]
+  bootstrap: [ScientifiquesComponent]
 })
 export class AppModule { }

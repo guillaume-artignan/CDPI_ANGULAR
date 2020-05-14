@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ScientifiquesComponent implements OnInit {
 
   title = "Détail sur ";
+  toto;
+  exemple;
   personne = {
                 nom : "Einstein",
                 prenom : "Albert",
@@ -22,9 +24,6 @@ export class ScientifiquesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toto(event,a){
-    this.personne.nom += "1"+a;
-    console.log(event);
-  }
+
 
 }

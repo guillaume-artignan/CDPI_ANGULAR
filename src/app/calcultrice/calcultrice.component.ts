@@ -15,6 +15,7 @@ export class CalcultriceComponent implements OnInit {
   }
 
   egal(){
+    
     try{
       this.resultat = ""+eval(this.resultat);
     } catch (e){

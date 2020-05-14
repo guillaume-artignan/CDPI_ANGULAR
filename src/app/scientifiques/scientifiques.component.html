@@ -1,7 +1,7 @@
 <div>
     <h1>{{title}} {{personne.prenom}} {{personne.nom}}</h1>
 
-    <h2 (click)="toto($event,'YO')" >Element</h2>
+    <h2>Element</h2>
     <h2>Détail</h2>
     <ul>
         <li>Nom : {{personne.nom}}</li>
@@ -9,4 +9,19 @@
         <li>Découverte : {{personne.decouverte}}</li>
         <li>Description : {{personne.description}}</li>
     </ul>
+    <h2>Modification</h2>
+    <ul>
+        <li><input [(ngModel)]= "personne.nom" placeholder="Nom"/></li>
+        <li><input [(ngModel)]= "personne.prenom" placeholder="Prenom"/></li>
+        <li><input [(ngModel)]= "personne.decouverte" placeholder="Decouverte"/></li>
+        <li><textarea [(ngModel)]= "personne.description" placeholder="Description"></textarea></li>
+    </ul>
+    <input type='checkbox' [(ngModel)]="toto" />
+    <select [(ngModel)]="exemple">
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+    </select>
+    {{toto}} {{exemple}}
+
 </div>

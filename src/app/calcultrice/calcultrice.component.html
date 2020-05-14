@@ -43,15 +43,20 @@
     </div>
 
     <div class="col-3">
-        <button (click)="egal($event)" class="btn btn-info">=</button></div>
+        <button (click)="egal()" class="btn btn-info">=</button>
+    </div>
 
     <div class="col-3">
         <button (click)="presse($event,'+')" class="btn btn-info">+</button>
     </div>
 
-    <div class="col-3"><button (click)="presse($event,0)" class="btn btn-info">0</button></div>
+    <div class="col-3">
+        <button (click)="presse($event,0)" class="btn btn-info">0</button>
+    </div>
 
-    <div class="col-3"><button (click)="nettoie($event)" class="btn btn-info">C</button></div>
+    <div class="col-3">
+        <button (click)="nettoie()" class="btn btn-info">C</button>
+    </div>
 
     <div class="col-3"><button (click)="presse($event,'-')" class="btn btn-info">-</button></div>
   </div>

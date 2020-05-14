@@ -4,13 +4,13 @@
     <h1>Angular Components</h1>
     <div class="form-group">
       <label for="title">Titres</label>
-      <input type="text" class="form-control" id="titre" placeholder="Email">
+      <input [(ngModel)]="titre" type="text" class="form-control" id="titre" placeholder="Titre">
     </div>
     <div class="form-group">
       <label for="link">link</label>
-      <input type="text" class="form-control" id="link" placeholder="Lien url">
+      <input [(ngModel)]="lien" type="text" class="form-control" id="link" placeholder="Lien url">
     </div>
-    <button  class="btn btn-success">Ajouter Lien</button>
+    <button  (click)="ajouterArticle()" class="btn btn-success">Ajouter Lien</button>
   </div>
  
   <div class="container">

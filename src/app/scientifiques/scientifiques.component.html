@@ -1,17 +1,24 @@
 <div>
+    <ol>
+        <li *ngFor="let p of personnes">{{p.nom}} {{p.prenom}}</li>
+    </ol>
+
+
     <h1>{{title}} {{personne.prenom}} {{personne.nom}}</h1>
 
     <h2>Element</h2>
-    <h2>Détail</h2>
+    <h2 (click)="presse($event)">Détail</h2>
     <ul>
         <li>Nom : {{personne.nom}}</li>
         <li>Prénom : {{personne.prenom}}</li>
         <li>Découverte : {{personne.decouverte}}</li>
         <li>Description : {{personne.description}}</li>
     </ul>
-    <h2>Modification</h2>
+    <h2 [ngClass]="{rouge:maCondition()}">Modification</h2>
     <ul>
+        <li *ngIf="personne.nom==''" class="error">Veuillez saisir un nom</li>
         <li><input [(ngModel)]= "personne.nom" placeholder="Nom"/></li>
+        <li *ngIf="personne.prenom==''" class="error">Veuillez saisir un prenom</li>
         <li><input [(ngModel)]= "personne.prenom" placeholder="Prenom"/></li>
         <li><input [(ngModel)]= "personne.decouverte" placeholder="Decouverte"/></li>
         <li><textarea [(ngModel)]= "personne.description" placeholder="Description"></textarea></li>

@@ -1,3 +1,11 @@
 ul {
     list-style-type: none;
 }
+
+.rouge {
+    color : red;
+}
+
+.error {
+    color : red;
+}

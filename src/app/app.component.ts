@@ -17,4 +17,12 @@ export class AppComponent {
   ajouterArticle(){
     this.articles.push(new Article(this.titre,this.lien));
   }
+
+  supprimeArticle(e){
+    var indice = this.articles.indexOf(e[1]);
+    console.log(indice);
+    if (indice!=-1){
+      this.articles.splice(indice,1);
+    }
+  }
 }

@@ -15,7 +15,9 @@
  
   <div class="container">
   
-    <app-article [article]="a" *ngFor="let a of articles"></app-article>
+    <app-article  (tooBad)="supprimeArticle($event)"
+                  [article]="a" 
+                  *ngFor="let a of articles"></app-article>
     
  
   </div>

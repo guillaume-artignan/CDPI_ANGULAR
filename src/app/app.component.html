@@ -14,10 +14,9 @@
   </div>
  
   <div class="container">
- 
-    <app-article></app-article>
-    <app-article></app-article>
-    <app-article></app-article>
+  
+    <app-article [article]="a" *ngFor="let a of articles"></app-article>
+    
  
   </div>
 </div>

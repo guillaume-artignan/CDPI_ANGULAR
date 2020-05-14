@@ -1,6 +1,8 @@
 <div>
     <ol>
-        <li *ngFor="let p of personnes">{{p.nom}} {{p.prenom}}</li>
+        <li (click)="selection(p)" 
+            [ngClass]="{rouge:p==personne}"
+            *ngFor="let p of personnes">{{p.nom}} {{p.prenom}}</li>
     </ol>
 
 
@@ -30,5 +32,6 @@
         <option value="c">C</option>
     </select>
     {{toto}} {{exemple}}
+    <img src="../../assets/pikachu.png" />
 
 </div>

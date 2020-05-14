@@ -11,6 +11,8 @@ export class ScientifiquesComponent implements OnInit {
   toto;
   exemple;
 
+ 
+
   personnes = [{
                 nom : "Einstein",
                 prenom : "Albert",
@@ -28,12 +30,7 @@ export class ScientifiquesComponent implements OnInit {
                 description : ""
               }];
 
-  personne = {
-                nom : "Einstein",
-                prenom : "Albert",
-                decouverte : "E=MC²",
-                description : "The scientifique"
-              };
+  personne = this.personnes[0];
   
 
 
@@ -49,6 +46,10 @@ export class ScientifiquesComponent implements OnInit {
 
   maCondition(){
     return this.personne.nom=='Einstein';
+  }
+
+  selection(e){
+    this.personne = e;
   }
 
 

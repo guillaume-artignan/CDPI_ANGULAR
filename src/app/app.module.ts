@@ -18,6 +18,6 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [ScientifiquesComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

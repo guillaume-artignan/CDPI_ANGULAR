@@ -1,7 +1,7 @@
 .Article {
     border : 1px solid gray;
     border-radius: 10px;
-
+    
 
 }
 
@@ -27,6 +27,8 @@
 
 .pour {
     color : lightseagreen;
+    user-select: none;
+    cursor: pointer;
 }
 
 .pour:hover, .contre:hover{
@@ -34,7 +36,9 @@
 }
 
 .contre {
-    color : lightseagreen
+    color : lightseagreen;
+    user-select: none;
+    cursor: pointer;
 }
 
 

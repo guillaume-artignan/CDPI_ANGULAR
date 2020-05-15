@@ -11,6 +11,9 @@ import { FormulairesComponent } from './formulaires/formulaires.component';
 import { CompteurService } from './compteur.service';
 import { CompteurTestComponent } from './compteur-test/compteur-test.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +22,17 @@ import { HttpClientModule } from '@angular/common/http';
     CalcultriceComponent,
     OperationComponent,
     FormulairesComponent,
-    CompteurTestComponent
+    CompteurTestComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule, HttpClientModule
+    BrowserModule,FormsModule,ReactiveFormsModule, HttpClientModule,
+    RouterModule.forRoot([{path:"articles", component:AppComponent},
+                          {path:"scientifiques", component: ScientifiquesComponent},
+                          {path:"calculatrice", component: CalcultriceComponent},
+                          {path :"formulaires", component: FormulairesComponent}])
   ],
   providers: [CompteurService],
-  bootstrap: [ScientifiquesComponent]
+  bootstrap: [MenuComponent]
 })
 export class AppModule { }

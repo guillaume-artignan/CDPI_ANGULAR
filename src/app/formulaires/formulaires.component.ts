@@ -4,8 +4,6 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 function narcissique(formControl : AbstractControl):{[s:string]:string} {
   if (formControl.value!="Guillaume")
     return {nomValid : 'Le nom '+formControl.value+" n'est pas valide"};
-   
-
 }
 
 @Component({

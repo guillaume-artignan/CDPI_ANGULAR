@@ -1,0 +1,16 @@
+.menu {
+    background-color: rgb(228, 242, 255);
+
+    border-radius: 10px;
+    border : 1px navy solid;
+    margin-bottom: 20px;
+    color : navy;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: none;
+}
+
+
+.menu li{
+    font-size: 20px;
+    line-height: 30px;
+}

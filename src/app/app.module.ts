@@ -5,19 +5,26 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ScientifiquesComponent } from './scientifiques/scientifiques.component';
 import { CalcultriceComponent } from './calcultrice/calcultrice.component';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OperationComponent } from './operation/operation.component';
+import { FormulairesComponent } from './formulaires/formulaires.component';
+import { CompteurService } from './compteur.service';
+import { CompteurTestComponent } from './compteur-test/compteur-test.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     ScientifiquesComponent,
-    CalcultriceComponent
+    CalcultriceComponent,
+    OperationComponent,
+    FormulairesComponent,
+    CompteurTestComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,ReactiveFormsModule, HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CompteurService],
+  bootstrap: [ScientifiquesComponent]
 })
 export class AppModule { }

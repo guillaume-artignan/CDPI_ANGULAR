@@ -1,0 +1,17 @@
+
+.operation {
+    font-size: 15pt;
+    font-family: "Consolas",Arial;
+}
+
+.egal {
+    font-size: 25pt;
+    font-family: "Consolas",Arial;
+    text-align: right;
+}
+
+.operations {
+    background-color: lightgray;
+    border: 1px solid gray;
+    box-shadow : 5px 5px 10px gray;
+}

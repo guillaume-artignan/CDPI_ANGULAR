@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { CompteurService } from '../compteur.service';
+import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './scientifiques.component.html',
-  styleUrls: ['./scientifiques.component.css']
+  styleUrls: ['./scientifiques.component.css'],
+  providers:[CompteurService]
 })
 export class ScientifiquesComponent implements OnInit {
 
@@ -34,7 +38,16 @@ export class ScientifiquesComponent implements OnInit {
   
 
 
-  constructor() { }
+  constructor(public compteur : CompteurService, 
+              private api:ApiService) {
+    
+    api.donneScientifiques().subscribe((d)=>this.donneesChargees(d));
+  }
+
+  donneesChargees(d){
+    this.personnes = d;
+    this.personne = d[0];
+  }
 
   ngOnInit(): void {
   }
@@ -50,6 +63,7 @@ export class ScientifiquesComponent implements OnInit {
 
   selection(e){
     this.personne = e;
+    this.compteur.ajouter();
   }
 
 

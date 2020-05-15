@@ -1,64 +1,74 @@
+
+
 <div class="container">
-  <div class="row">
-    <div class="col-12 resultat">{{resultat}}</div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <button (click)="presse($event,7)" class="btn btn-info">7</button>
-    </div>
-    <div class="col-3">
-      <button (click)="presse($event,8)" class="btn btn-info">8</button>
-    </div>
-    <div class="col-3">
-        <button (click)="presse($event,9)" class="btn btn-info">9</button>
-    </div>
-    <div class="col-3">
-        <button (click)="presse($event,'/')" class="btn btn-info">/</button></div>
+    <div class="row">
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12 resultat">{{resultat}}</div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                <button (click)="presse($event,7)" class="btn btn-info">7</button>
+                </div>
+                <div class="col-3">
+                <button (click)="presse($event,8)" class="btn btn-info">8</button>
+                </div>
+                <div class="col-3">
+                    <button (click)="presse($event,9)" class="btn btn-info">9</button>
+                </div>
+                <div class="col-3">
+                    <button (click)="presse($event,'/')" class="btn btn-info">/</button></div>
 
-    <div class="col-3">
-        <button (click)="presse($event,4)" class="btn btn-info">4</button></div>
+                <div class="col-3">
+                    <button (click)="presse($event,4)" class="btn btn-info">4</button></div>
 
-    <div class="col-3">
-        <button (click)="presse($event,5)" class="btn btn-info">5</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,5)" class="btn btn-info">5</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="presse($event,6)" class="btn btn-info">6</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,6)" class="btn btn-info">6</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="presse($event,'*')" class="btn btn-info">*</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,'*')" class="btn btn-info">*</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="presse($event,1)" class="btn btn-info">1</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,1)" class="btn btn-info">1</button>
+                </div>
 
-    <div (click)="presse($event,2)" class="col-3">
-        <button class="btn btn-info">2</button>
-    </div>
+                <div (click)="presse($event,2)" class="col-3">
+                    <button class="btn btn-info">2</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="presse($event,3)" class="btn btn-info">3</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,3)" class="btn btn-info">3</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="egal()" class="btn btn-info">=</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="egal()" class="btn btn-info">=</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="presse($event,'+')" class="btn btn-info">+</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,'+')" class="btn btn-info">+</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="presse($event,0)" class="btn btn-info">0</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="presse($event,0)" class="btn btn-info">0</button>
+                </div>
 
-    <div class="col-3">
-        <button (click)="nettoie()" class="btn btn-info">C</button>
-    </div>
+                <div class="col-3">
+                    <button (click)="nettoie()" class="btn btn-info">C</button>
+                </div>
 
-    <div class="col-3"><button (click)="presse($event,'-')" class="btn btn-info">-</button></div>
-  </div>
-  <div></div>
+                <div class="col-3"><button (click)="presse($event,'-')" class="btn btn-info">-</button></div>
+            </div>
+            <div></div>
+        </div>
+        <div class="col-4">
+            
+            <operation (delete)="supprime(ope)" *ngFor="let ope of operations" [operation]="ope"></operation>
+        </div>
+    </div> 
 </div>

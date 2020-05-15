@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CalcultriceComponent implements OnInit {
 
   resultat = "0";
+  operations = [];
 
   constructor() { }
 
@@ -17,7 +18,10 @@ export class CalcultriceComponent implements OnInit {
   egal(){
     
     try{
-      this.resultat = ""+eval(this.resultat);
+      var resultatEval = eval(this.resultat);
+      this.operations.push({operation : this.resultat, egal:resultatEval});
+      this.resultat = ""+ resultatEval;
+
     } catch (e){
       this.resultat = "Err";
     }
@@ -31,6 +35,14 @@ export class CalcultriceComponent implements OnInit {
     if (this.resultat=="0" || this.resultat=="Err")
       this.resultat=""+touche;
     else this.resultat+=""+touche;
+  }
+
+  supprime(ope){
+    console.log("HELLO");
+    var indice = this.operations.indexOf(ope);
+    if (indice!=-1){
+      this.operations.splice(indice,1);
+    }
   }
 
 }

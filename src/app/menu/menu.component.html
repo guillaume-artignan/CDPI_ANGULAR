@@ -1,3 +1,17 @@
-Mon menu
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li><a routerLink="./articles">Articles</a></li>
+                <li><a routerLink="./calculatrice">Calculatrice</a></li>
+                <li><a routerLink="./scientifiques">Scientifiques</a></li>
+                <li><a routerLink="./formulaires">Formulaires</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>            
+        </div>
+    </div>
 
-<router-outlet></router-outlet>
+</div>
+
